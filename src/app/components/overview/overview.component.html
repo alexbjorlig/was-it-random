@@ -1,0 +1,5 @@
+<button mat-stroked-button color="primary" (click)="addNewPlayer()">Add player</button>
+
+<div fxLayout="column" fxLayoutGap="20px" fxLayoutAlign="space-around">
+  <app-player-card *ngFor="let player of players" [player]=player></app-player-card>
+</div>

@@ -1,0 +1,17 @@
+<mat-card>
+    <mat-card-header>
+        <!-- <div mat-card-avatar class="example-header-image"></div> -->
+        <mat-card-title>Player #{{player.playerNumber}}</mat-card-title>
+    </mat-card-header>
+    <button mat-icon-button
+        [disabled]="player.numberOfDices >= 10"
+        (click)="addOrRemoveDice(player.playerNumber, 1)">
+        <mat-icon aria-label="Add dice">add</mat-icon>
+    </button>
+    <button mat-icon-button 
+        [disabled]="player.numberOfDices === 0"
+        (click)="addOrRemoveDice(player.playerNumber, -1)">
+        <mat-icon aria-label="Remove dice">remove</mat-icon>
+    </button>
+    <p>Number of dice: {{player.numberOfDices}}</p>
+</mat-card>
